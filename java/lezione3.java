@@ -32,5 +32,11 @@ public class lezione3 {
     System.out.println(nome.toLowerCase()); //scrive la stringa in minuscolo
     System.out.println(nome.trim()); //tagli gli spazi vuoti (davanti e dietro)
     System.out.println(nome.replace("a", "e")); //cambia tutte le "a" con "e"
+    int p=10;
+    System.out.println(tostring(p));
+    }
+
+    private static char[] tostring(int x) {
+        return null;
     }
 }
