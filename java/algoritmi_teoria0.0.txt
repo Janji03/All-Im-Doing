@@ -48,3 +48,32 @@ asintoticamente equivalenti a g(n) come
 
 intuitivamente rappresenta il range del costo dell'algoritmo
 (tipo unione di OMEGA-GRANDE e O-GRANDE)
+
+
+O-PICCOLO:
+definizione: Data una funzione di costo g(n) definiamo l’insieme di funzione che sono
+dominate asintoticamente da g(n) come
+o(g(n)) = {f (n) | ∀c > 0, ∃n0 ≥ 0 tale che ∀n ≥ n0, f (n) < cg(n)}
+
+W-PICCOLO:
+definizione: Data una funzione di costo g(n) definiamo l’insieme di funzioni che
+dominano asintoticamente g(n) come
+ω(g(n)) = {f (n) | ∀c > 0, ∃n0 ≥ 0 tale che ∀n ≥ n0, f (n) > cg(n)}
+
+usando queste definizioni è possibile effettuare uno studio asintotico 
+del costo di un algoritmo.
+
+C'è un modo molto piu easy per farlo ovvero usando i limiti:
+- si calcola il limite per n che tende a infinito del rapporto tra f(n) e g(n).
+- se il limite esiste si hanno 3 casi 
+
+1)
+lim n → ∞ f (n)/g(n) = 0
+allora f (n) = o(g(n))          allora f (n) = O(g(n))
+
+2)
+lim n → ∞ f (n)/g(n) = ∞
+allora f (n) = ω(g(n))          allora f (n) = Ω(g(n))
+
+3)
+lim n → ∞ f (n)/g(n)= k > 0     allora f (n) = Θ(g(n))
