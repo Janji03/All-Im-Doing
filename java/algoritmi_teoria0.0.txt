@@ -1,0 +1,50 @@
+Lezione 0.0
+
+NOTAZIONE ASINTOTICA:
+
+studiare il comportamento asintotico permette di:
+1)ignorare costanti additive/moltiplicative e termini di ordine inferiore
+
+2)Descrive quanto velocemente tempo/memoria crescono rispetto
+alla dimensione dell’input
+
+3)Ci permette di confrontare le prestazioni di algoritmi differenti
+che risolvono lo stesso problema, indipendentemente
+dall’hardware su cui sono eseguiti
+
+-Definzione funzione di costo:
+Dato n ≥ 0 indichiamo con f (n) ≥ 0 la quantit`a di risorse (tempo di
+calcolo oppure occupazione di memoria) richiesta da un algoritmo su un
+input di dimensione n
+
+NOTAZIONE ASINTOTICA (concetti di O-grande, omega-grande, theta,
+ o-piccolo, w-piccolo)
+
+O-GRANDE:
+definzione : Data una funzione di costo g(n) definiamo l’insieme di funzioni per cui
+g(n) rappresenta un limite asintotico superiore come
+notation 45
+O(g(n)) = {f (n) | ∃c > 0, n0 ≥ 0 tale che ∀n ≥ n0, f (n) ≤ cg(n)}
+
+in modo intuitivo definisce l'insieme di funzioni che rappresentato 
+un lower bound, in questo modo possiamo trovare il costo minimo sotto il quale 
+il nostro algoritmo non "scende".
+
+
+OMEGA-GRANDE:
+definizione: Data una funzione di costo g(n) definiamo l’insieme di funzioni per cui
+g(n) rappresenta un limite asintotico inferiore come
+Ω(g(n)) = {f (n) | ∃c > 0, n0 ≥ 0 tale che ∀n ≥ n0, f (n) ≥ cg(n)}
+
+in modo intutivo definisce l'insieme di funzioni che rappresentato 
+un upper bound, in questo modo possiamo trovare il costo massimo sopra il quale 
+il nostro algoritmo non "sale".
+
+THETA:
+definizione: Data una funzione di costo g(n) definiamo l’insieme di funzioni
+asintoticamente equivalenti a g(n) come
+Θ(g(n))={f (
+3.1 Asymptotic notationn)|∃c1,c2>0,n0≥0 t.c. ∀n≥n0,c1g(n)≤f (n)≤c2g(n)}
+
+intuitivamente rappresenta il range del costo dell'algoritmo
+(tipo unione di OMEGA-GRANDE e O-GRANDE)
