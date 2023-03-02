@@ -34,6 +34,7 @@ public class lezione3 {
     System.out.println(nome.replace("a", "e")); //cambia tutte le "a" con "e"
     int p=10;
     System.out.println(tostring(p));
+     
     }
 
     private static char[] tostring(int x) {
