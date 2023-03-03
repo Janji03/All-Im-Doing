@@ -9,7 +9,12 @@ public class lezione9 {
         persona.mostra_static(); //metodo static della classe persona (non va chiamato da un oggetto della 
         // classe ma dalla classe stessa)
 
+
         //Ereditarietà 
-        
+        persona persona3 = new persona("Andrea", "C", 4);
+        Studente studente1 = new Studente ("Mario", "Verdi", 22 , "3C");
+        studente1.presenta();
+        studente1.media_voti();
+        studente1.saluta(persona3);
     }
 }
