@@ -12,6 +12,10 @@ public class lezione4 {
         Integer numero = 5;
         Double virgola = 5.12;
         String stringa ="ciao";
+        System.out.println(vero);
+        System.out.println(carattere);
+        System.out.println(virgola);
+        System.out.println(stringa);
         //in questo modo impacchettiamo i tipi di dato primitivi in delle reference che permettono di 
         //usare dei metodi 
         int prova_numero = 5;
