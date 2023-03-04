@@ -15,5 +15,11 @@ public class Main {
         System.out.println(prova_B.nome);
         A prova_A = new A ();
         System.out.println(prova_A.nome);
+        //Incapsulamento : nasconde degli attribuiti con il private e diventano accessibili sono 
+        //con dei metodi: getters e setters
+        Calciatore calciatore1 = new Calciatore("Francesco", "Totti", 18);
+        System.out.println(calciatore1.getNome());
+        calciatore1.setNome("Zidane");
+        System.out.println(calciatore1.getNome());
     }
 }
