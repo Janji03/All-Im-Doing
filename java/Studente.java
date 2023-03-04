@@ -21,6 +21,6 @@ public class Studente extends persona {
     @Override //serve per dire che si sta utilizzando un metodo ereditato dalla classe padre
     void saluta( persona PersonaDaSalutare)
     {
-        System.out.println("ciao " + PersonaDaSalutare.nome + " da studente" );
+        System.out.println("buongiorno prof " + PersonaDaSalutare.nome  );
     }
 }

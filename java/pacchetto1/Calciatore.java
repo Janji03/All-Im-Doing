@@ -3,11 +3,18 @@ package pacchetto1;
 public class Calciatore {
     private String nome;
     private String cognome;
-    int goal;
+    protected int goal;
     Calciatore(String nome, String cognome,int goal)
     {
         this.setNome(nome);
         this.setCognome(cognome);
+    }
+
+    Calciatore(Calciatore copia_calciatore)
+    {
+        this.setNome(copia_calciatore.getNome());
+        this.setCognome(copia_calciatore.getCognome());
+        
     }
 
     //Metodi getter
@@ -27,5 +34,11 @@ public class Calciatore {
     public void setCognome(String cognome)
     {
         this.cognome=cognome;
+    }
+    public void copy(Calciatore copia_calciatore)
+    {
+        this.setNome(copia_calciatore.getNome());
+        this.setCognome(copia_calciatore.getCognome());
+        
     }
 }
