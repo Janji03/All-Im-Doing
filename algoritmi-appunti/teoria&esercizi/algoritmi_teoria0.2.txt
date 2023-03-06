@@ -1,0 +1,17 @@
+Algoritmi di Ordinamento 
+
+Principali Algoritmi:
+Incrementali: SelectionSort, InsertionSort
+Divide et Impera: MergeSort, QuickSort
+Non-comparativi: CountingSort, RadixSort
+
+Struttura dati utilizzata: array
+
+
+-Selection Sort:
+intuitivamente: cerca in modo iterativo il minimo elemento nell'array
+e swappa finche non è ordinato
+
+
+
+-InsertionSort:
