@@ -1,5 +1,6 @@
 Algoritmi di Ordinamento 
 
+
 Principali Algoritmi:
 Incrementali: SelectionSort, InsertionSort
 Divide et Impera: MergeSort, QuickSort
@@ -11,7 +12,30 @@ Struttura dati utilizzata: array
 -Selection Sort:
 intuitivamente: cerca in modo iterativo il minimo elemento nell'array
 e swappa finche non è ordinato
-
+Costo: utilizza un ciclo for e una funzione swap(operazioni costanti)
+il costo nel caso pessimo, medio e ottimo è ugale Θ(n^2) (complessità quadratica)
 
 
 -InsertionSort:
+intuitivamente: parte dal secondo elemento e  iterativamente controlla se un elemento
+è minore dei suoi predecessori (in tal caso swappa) 
+Costo: utilizza un ciclo for (costante in quato va controllato tutto l'array)
+e un ciclo while che ha un costo dipendente dai casi: 
+1) caso pessimo: Θ(n^2)
+2) caso ottimo: Θ(n)
+
+
+Algoritmi di Ordinamento nella classe divide et impera 
+MergeSort
+QuickSort
+
+MergeSort:
+Intuitivamente :divide l'array in due metà, 
+risolve il problema in modo ricorsivo sulle due metà,
+ottiene due array ordinati che combina in un unico array ordinato
+Costo:
+L’equazione di ricorrenza di mergesort `e quindi
+T(n) = { 1                   n ≤ 1
+       {  2T(n/2) + f (n)    n > 1
+
+Risolvendo l'equazione di ricorrenza con Master Theorem: T(n) = Θ(n log n)
