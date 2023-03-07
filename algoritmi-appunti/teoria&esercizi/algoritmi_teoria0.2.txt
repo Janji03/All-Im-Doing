@@ -39,3 +39,34 @@ T(n) = { 1                   n ≤ 1
        {  2T(n/2) + f (n)    n > 1
 
 Risolvendo l'equazione di ricorrenza con Master Theorem: T(n) = Θ(n log n)
+
+
+
+QuickSort:
+Intuitivamente: partizioniamoA[1, · · · , n] in due sotto-arrayA1 = A[1, · · · , q−1]
+e A2 = A[q + 1, · · · , n] tali che tutte le chiavi in A1 e A2 siano 
+rispettivamente ≤ e > della chiave di A[q] (A[q] scelto durante il partizionamento)
+richiamiamo ricorsivamente l’algoritmo su A1 e A2
+Costo:
+1) caso pessimo: Partizionamento pessimo: un array ha lunghezza 0 e l’altro n − 1
+T(n) = {      1              n ≤ 1
+       {T(n − 1) + T(0) + n  n > 1
+Risolvendo l'equazione di ricorrenza con metodo iterativo: T(n) = Θ(n^2)
+2) caso ottimo: Partizionamento ottimo: i due sotto-array sono entrambi lunghi n/2
+T(n) = {      1             n ≤ 1
+       {      2T(n/2) + n   n > 1
+Risolvendo L’equazione di equivalenza con  Master Theorem (α = β = 1) : T(n) = Θ(n log n)
+3)caso medio: 
+T(n) = { 1                          n ≤ 1 
+       { T(i) + T(n − i − 1) + n    n > 1
+
+assumendo che tutte le partizioni siano equiprobabili, otteniamo: 
+T(n) = {1 n ≤ 1
+       { 1/n (sommatoria da i=0 a n-1) [T(i) + T(n − i − 1)] +1  n>1
+
+semplificando l'equazione di ricorrenza otteniamo: 
+T(n) = { 1                                       n<=1
+       { 2/n  (sommatoria da i=0 a n-1) T(i) + n n>1
+
+Risolvendo l'equazione di equivalenza
+con metodo di sostituzione otteniamo: T(n) = O (n log n)
