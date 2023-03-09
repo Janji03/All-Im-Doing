@@ -24,5 +24,8 @@ public class lezione8 {
         persona[] array_persone = {persona1,persona2,persona3};
         System.out.println(array_persone[0]);
         persona1.saluta(persona2);
+        persona fre = new persona("fre","mazza",19);
+        persona fillo = new persona ("fillo","marini",19);
+        fre.saluta(fillo);
     }
 }
