@@ -91,3 +91,18 @@ accedere direttamente alla coda e viceversa) ma diventa più complesso visitare 
 restano invariati tranne per l'inserimento in coda 
 
 4) Lista con puntatori a testa e coda:
+
+Lista semplice o doppiamente concatenata in cui si aggiungono due puntatori per testa e 
+coda. ha gli stessi costi delle liste concatenate circolari 
+
+
+Queste sono le conclusioni:
+(relative a caso medio e pessimo)
+
+Type                        search          insert(testa)              insert (coda)           delete
+Concatenata semplice        O(n)            O(1)                       Θ(n)                    O(n)
+Doppiamente concatenata     O(n)            O(1)                       Θ(n)                    O(n)
+Circolare                   O(n)            O(1)                       O(1)                    O(n)
+Puntatori testa e coda      O(n)            O(1)                       O(1)                    O(n)
+
+
