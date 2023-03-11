@@ -1,2 +1,37 @@
 lezione 0.1
 
+Equazioni di Ricorrenza:
+
+Permettono di determinare la crescita asintotica degli algoritmi ricorsivi.
+
+3 metodi principali per risolvere le equazioni di ricorrenza:
+1) Metodo dell' iterazione
+2) Metodo della sostituzione 
+3) Master Theorem (OP)
+
+
+1) Metodo dell'iterazione:
+Intuitivamente: si sostituisce la parte ricorsiva dell'algoritmo
+in modo iterativo. 
+
+
+2)Metodo della sostituzione:
+Intuitivamente: si ipotizza una soluzione (ipotesi) e si valida induttivamente:
+si ottiene cosi un caso base e un caso induttivo 
+
+3)Master Theorem:
+dato un algoritmo bisogna trovare l'equazione di ricorrenza corrispondente (pretty tough)
+che deve essere nella forma:
+Si consideri la seguente equazione di ricorrenza
+T(n) = {    d                n = 1
+       {  aT(n/b) + cn^β     n > 1
+
+Successivamente si calcola α = logb (a) = log a / log b 
+ci sono 3 possibili casi :
+
+Se α > β allora T(n) = Θ(n^α)
+
+Se α = β allora T(n) = Θ(n^α log n)
+
+Se α < β allora T(n) = Θ(n^β)
+
