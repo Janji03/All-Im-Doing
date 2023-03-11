@@ -28,3 +28,29 @@ Operazioni basilari Dizionario:
 Per implementare il prototipo di chiave-valore possiamo utilizzare un array sul quale 
 è possibile effettuare le operazioni basilari di ricerca, inserimento e eliminazione.
 
+(ho implementato le funzioni basilari in java e su virtuale c'è l'analisi del
+costo di ogni funzione e le differenze di costo tra array ordinato e non ordinato)
+
+Queste sono le conclusioni:
+
+funzioni:                  Search                    Insert                  Delete 
+
+casi                       medio/pessimo          |   medio/pessimo       |   medio/pessimo 
+                                                  |                       |
+Array non ordinati         O(n) | O(n)            |  O(n) | O(n)          |   Θ(n)  | Θ(n)
+                                                  |                       |
+Array ordinati             O(log n) | O(log n)    | O(n) | O(n)           |   O(n) | O(n)
+
+Si puo notare come nel caso di array ordinati si ha un leggero miglioramento nella funzione Search 
+
+
+Lista:
+
+è una struttura dati in cui gli elementi sono ordinati in ordine sequenziale 
+ci sono tre operazioni basilari: ricerca, inserimento, rimozione 
+Si può implementare una lista con un array oppure Liste concatenate (Linked List):
+-nel caso dell'array l'ordine è determinato dagli indici e lo spazio è limitato
+-nelle liste concatenate l'ordine è determinato da una catena di puntatori e 
+lo spazio allocato è dinamico 
+
+Liste Concatenate 
