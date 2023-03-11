@@ -1,2 +1,30 @@
 Strutture Dati Elementari
 
+Definiscono in che modo sono organizzati i dati e non quali 
+(ad esempio una lista puo contenere interi o stringhe) e definiscono 
+le operazioni per accedere e modificare i dati 
+
+Strutture dati elementari: 
+1) Liste concatenate 
+2) Pile
+3) Code 
+5) Alberi 
+
+Le strutture dati hanno diverse proprietà
+
+1) Lineari o non lineari (esempio un array puo essere ordinato oppure no)
+2) Statiche o Dinamiche ( hanno una dimensione costante oppure dinamica)
+3) Omogenee o Eterogenee (possono contenere un solo tipo di dato oppure diversi tipi)
+
+
+Dizionario: struttura dati di dimensione dinamica che ha un insieme di chiavi ognuna associata ad 
+un valore (dato), le chiavi sono univoche mentre i valori possono essere duplicati
+
+Operazioni basilari Dizionario:
+1)Search (prende una chiave e restituisce il valore associato)
+2)Insert (inserisce una coppia chiave-valore nel Dizionario)
+3)Delete (prende una chiave e elemina sia il valore associato che la chiave stessa)
+
+Per implementare il prototipo di chiave-valore possiamo utilizzare un array sul quale 
+è possibile effettuare le operazioni basilari di ricerca, inserimento e eliminazione.
+
