@@ -54,3 +54,40 @@ Si può implementare una lista con un array oppure Liste concatenate (Linked Lis
 lo spazio allocato è dinamico 
 
 Liste Concatenate 
+
+esistono diversi tipi di liste :
+1) Lista concatenata semplice 
+2) Lista doppiamente concatenata
+3) Lista concatenata circolare 
+4) Lista con puntatori testa e coda 
+
+
+1) Lista concatenata semplice: 
+Struttura: ogni nodo della lista contiene un valore chiave (x.key) e un puntatore al 
+nodo successivo (x.next). se x.next è uguale a NIL allora x è l'ultimo nodo della 
+lista 
+
+le operazioni base sono: search, head_insert, tail_insert, delete e search_prev
+
+
+2) Lista doppiamente concatenata:
+
+sono come le liste semplici ma ogni nodo continene un terzo campo x.prev (un puntatore al
+nodo precedente), se x.prev = NIL allora x è il primo nodo della lista 
+
+a differenza della lista semplice può essere visitata in entrambe le direzioni 
+e nella funzione delete non serve "salvarsi" il nodo precedente a quello che si vuole 
+rimuovere. Tuttavia il costo delle operazioni rispetto alle liste semplici rimane invariato
+
+
+3) Lista concatenata circolare:
+
+Sono liste doppiamente concatenate dove il campo next dell'ultimo nodo punta al 
+primo nodo e il campo prev del primo nodo punta all'ultimo nodo
+
+questo tipo di lista permette un accesso piu veloce ( perchè dalla testa si può 
+accedere direttamente alla coda e viceversa) ma diventa più complesso visitare la lista 
+(e in generale fare cicli sulla lista in quanto nessun nodo punta a NIL). I costi
+restano invariati tranne per l'inserimento in coda 
+
+4) Lista con puntatori a testa e coda:
