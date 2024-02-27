@@ -1,0 +1,9 @@
+#just having fun with python 
+
+a=5
+b=3
+
+if(a>b):
+    print("i need no money")
+if(b>a):
+    print("i need money")
