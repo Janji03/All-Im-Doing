@@ -1,0 +1,119 @@
+Qual è la funzione di un compilatore?
+Qual è la funzione di un interprete?
+Cosa è un linguaggio assemblativo (assembler)? 
+
+Come nasce il sistema operativo UNIX?
+Perché nasce il linguaggio C?
+Quali sono i principi fondamentali del linguaggio C?
+In che linguaggio è scritto il Compilatore C? Perché?
+Cosa è un cross-compiler?
+
+
+Lezione 28-09-2023
+
+-------------Domande-------------
+
+Qual è la funzione di un compilatore?
+traduce codice scritto in un linguaggio ad alto livello (linguaggio di progammazione)
+in lingaggio macchina(eseguibile direttamente da CPU) o codice eseguibile 
+
+Qual è la funzione di un interprete?
+esegue il codice scritto in linguaggio di alto livello direttamente istruzione per 
+istruzione senza dover passare dal compilatore
+
+Cosa è un linguaggio assemblativo (assembler)? 
+linguaggio di basso livello (sopra però il linguaggio macchina) che si utilizza per
+scrivere programmi direttamente in linguaggio macchina
+
+Come nasce il sistema operativo UNIX?
+
+
+
+Perché nasce il linguaggio C? Quali sono i principi fondamentali del linguaggio C?
+-Linguaggio coinciso: parole chiave e simboli sono brevi e non ci sono ridondanze
+-Minimale: delega tutto alla libreria standard C (la maggior parte delle funzioni appartengono a librerie)
+-Espressioni: tutte le espressioni possono essere trasformate in istruzioni con ;
+Argomenti/Valori: gli argomenti delle funzioni sono sempre passati per valore (ma si pu passare per valore l'indirizzo di una variabile, i.e. il suo puntatore)
+
+
+In che linguaggio è scritto il Compilatore C? Perché? Cosa è un cross-compiler?
+
+
+-----------------------Linguaggio C-------------------------------
+
+Il comando gcc: cosa fa? quali sono i passi gestiti da gcc?
+Come si selezionano solo alcuni dei passi di gcc?
+
+Il comando gcc è un compilatore C che permette di generare codice eseguibile.
+gestisce il preprocessamento, la compilazione, il collegamento e la generazione del file eseguibile 
+a partire dal codice sorgente in C
+
+gcc -o Pippo Pippo.c :
+L'opzione -o in gcc consente di specificare il nome del file di output per il programma compilato
+In questo caso, il comando genererà un file eseguibile Pippo a partire dal codice sorgente in "Pippo.c".
+./Pippo (esegue il programma e ritorna l'output)
+
+
+gcc -c Pippo.c :
+L'opzione -c in gcc indica di eseguire solo la fase di compilazione.
+Questo significa che verrà generato solo un file oggetto (.o) dal codice sorgente senza creare il file eseguibile.
+
+
+gcc -E Pippo.c :
+L'opzione -E in gcc indica di eseguire solo la fase di preprocessing del codice sorgente, generando un output preprocessato. 
+
+gcc -S Pippo.c :
+L'opzione -S in gcc indica di eseguire solo la fase di compilazione, 
+ma anziché generare un file oggetto, genera un file di codice assembly. 
+
+n breve, le opzioni -o, -c, -E e -S di gcc consentono di controllare specifici passaggi del processo di compilazione e generazione di codice.
+
+
+
+
+A cosa serve "volatile" nella definizione di una variabile?
+indica al compilatore che la variabile potrebbe cambiare il suo valore in modo imprevisto e non previsto dal codice sorgente.
+In altre parole, informa il compilatore che la variabile non è garantito che mantenga il suo valore tra diverse operazioni, 
+anche se il codice sorgente non sembra modificarla. 
+uso di "volatile" è una dichiarazione al compilatore che gli dice di non ottimizzare il codice che coinvolge quella variabile
+e di considerare che il suo valore può cambiare in qualsiasi momento da cause esterne
+
+
+Cos'è l'header di una libreria? 
+L'header di una libreria, come ad esempio l'header <stdio.h>  è un file di intestazione (header file)
+che contiene le dichiarazioni delle funzioni, delle costanti e delle strutture dati fornite da quella libreria.
+esempio #include <stdio.h> contiene la dichiarazione della funzione printf
+int printf(const char *format, ...);
+Questa dichiarazione indica che la funzione printf restituirà un valore di tipo int
+e accetterà uno o più argomenti, tra cui una stringa di formato (const char *) e eventuali argomenti aggiuntivi specificati da .... 
+
+
+In realtà è l'esecuzione del programma inizia dalla funzione _start, non main: perché?
+La presenza della funzione _start e la sua chiamata a main è parte dell'infrastruttura di avvio e inizializzazione fornita dal sistema operativo e dalla libreria di runtime del C. Questa separazione consente al sistema operativo e alla libreria di runtime di gestire l'inizializzazione e la pulizia dell'ambiente del programma prima e dopo l'esecuzione della funzione main. Inoltre, fornisce un modo per passare gli argomenti da riga di comando al programma C.
+
+Come fa un programma C a eseguire una system call?
+
+
+
+
+cosa succede se tolgo l'header include <stdio> dal file?
+vengono generati dei warning (dicono che stai usando funzioni senza la libreria) 
+ma il programma funziona 
+
+int main()
+{
+    return 42;
+}
+./42 (non stampa niente ma calcola il programma quindi 42)
+echo $? (ritorna il valore dell'ultimo processo eseguito)
+
+-O2 (comando per ottimizzare )
+
+quando compili con linux le librerie sono allocato in modo dinamico nel momento dell'esecuzione:
+questo permette di usare sempre l'ultima versione della libreria (evita bug)
+se fosse allocata in modo statico e hai 90 processi che usano la libreria C dovresti allocare 90 volte lo spazio 
+per la libreria 
+
+se compilo come oggetto gcc -c 42.c e poi uso ld 42.o 
+
+guardati come funzionano le system call 

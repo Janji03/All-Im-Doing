@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> sintassi css</title>
+    <style>
+        h1{
+            background-color: rgb(125, 252, 210);
+            border: solid 1px black;
+            padding: 20px;
+        }
+        h1{
+            background-color: purple;
+            
+        }
+        .prova{
+            background-color: yellow;
+            color: brown;
+        }
+
+        body{
+            color: green;
+        }
+        p{
+            color: unset;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        Sintassi CSS :
+        selettore + {} + regole dentro le parentesi
+
+        Cascata : CSS = cascated style sheet 
+        se definisco due volte lo style di h1 ad esempio nel head per come è strutturato il DOM
+        verrà applicata la prima regola e poi la seconda quindi a schermo compare la seconda 
+
+
+        Specificità : se metto una classe di fianco a un selettore e definisco lo style di quella classe allora sto gestendo quel selettore 
+        singolarmente fregandomene di ereditarità e cascata 
+        
+        Ereditarietà: esempio concreto se definisco il body verde, vedrò anche gli h1 verdi anche se nello style li ho definiti con 
+        altri colori, questo perchè il body contiene gli h1 e per effetto dell' ereditarietà gli elementi contenuti ereditano le regole dei loro
+        contenitori 
+
+        come controllare ereditarietà : posso mettere inherit (eredità), initial(nero di default), unset (si comporta in modo basico secondo regole definite)
+        all: unset fa perdere tutte le proprietà 
+
+        in base a come applichiamo una regola vengono attribuiti dei punti, questo serve perchè ci sono spesso collisioni di stili e quindi devi stare attento 
+        a quanti punti attribuire ad uno style se vuoi essere sicuro che poi venga mostrato a schermo 
+
+
+    -->
+
+    <h1> Titolo di prova </h1>
+
+    <p style="background-color: rgb(242, 23, 23); border: solid 1px black;"> provo lo style inline </p>
+
+    <h1 class="prova"> Provo una classe </h1>
+
+    
+</body>
+</html>

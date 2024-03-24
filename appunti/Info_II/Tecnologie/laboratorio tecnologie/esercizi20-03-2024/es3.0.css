@@ -1,0 +1,56 @@
+
+
+#one {
+    background-color: blue;
+    height: 10%;
+    width: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+  }
+  
+  #two {
+    background-color: green;
+    height: 20%;
+    width: 50%;
+     position: absolute;
+    top: 10%; 
+    left: 0;
+  }
+  
+  #three {
+    background-color: yellow;
+    height: 30%;
+    width: 50%;
+    position: absolute;
+    top: 30%; 
+    right: 0;
+  }
+  
+  #four {
+    background-color: red;
+    height: 20%;
+    width: 40%;
+    position: absolute;
+    top: 60%; 
+    right: 0;
+  }
+  
+  #five {
+    background-color: orange;
+    height: 20%;
+    width: 60%;
+    position: absolute;
+    top: 60%; 
+    left: 0;
+  }
+  #six {
+    background-color: CornflowerBlue;
+    height: 20vh;
+    width: 100%;
+    position: absolute;
+    top: 80%; 
+    left: 0;
+  }
+  
+  

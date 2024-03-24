@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selettori</title>
+
+    <style>
+        /* commento */
+        h1,
+        p,
+        .highlight{
+            background-color: aqua;
+        }
+        *{
+            font-size: 20px;
+        }
+        #univoco{
+            color: orange;
+            background-color: initial;
+        }
+
+
+        a[title]{
+            background-color: blanchedalmond;
+            font-size: 20px;
+        }
+        a[href ="home.html"]{
+            color: crimson;
+        }
+
+        a:hover{
+            color: hotpink;
+        }
+        p::first-line{
+            font-size: 120%;
+            font-weight: bold;
+        }
+        
+        .box::before{
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            border: solid;
+        }
+
+        .box p{
+            color: chocolate;
+            background-color: initial;
+        } /* discendente (tutti i p che si trovano dentro una classe box hanno questo style)*/
+        
+        .box>p{
+            color: lightgreen;
+        } /* prende solo i child di box */
+        h1 + p{
+            font-weight: bold;
+            background-color: black;
+            color: purple;
+            padding: .5em;
+        } /* mi sto riferendo a quel p che è fratello diretto di h1*/
+
+        h1 ~ p{
+            background-color: magenta;
+            color: initial;
+        }
+
+    </style>
+    
+</head>
+
+<body>
+    <!--
+        liste di selettori
+        selettori di tipo/elementi 
+        selettore universale *
+        selettore di classe .classe : si possono anche concatenare .classe1.classe2
+        selettore di id : #
+        selettori di attributo 
+        pseudoclassi : sono degli stati delle classi: tipo quando passo il mouse sopra un link posso colorarlo 
+        pseudoelementi
+        combinatori : descendant, child, siblings
+    -->
+
+    <h1>  provo una lista di selettori</h1>
+    <p> prova paragrafo lista</p>
+    <span class="highlight"> sono uno span lista</span>
+    <p id="univoco"> paragrafo con id</p>
+    <ul>
+        <li><a href="#" title="divertiamoci a colorare gli attributi YEAAAHH"> sono un link con gli attributi colorati </a> </li>
+        <li><a href="home.html" title="divertiamoci a colorare gli attributi YEAAAHH"> sono un link con gli attributi colorati </a> </li>
+        <li><a href="#" title="divertiamoci a colorare gli attributi YEAAAHH"> sono un link con gli attributi colorati </a> </li>
+    </ul>
+
+    <p class="box"> "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+         cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. 
+          Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates </p>
+
+    <div class="box">
+        <div> <p> ciao</p></div>
+        <p> ciao</p>
+        <p> ciao</p>
+        <p> ciao</p>
+        <p> ciao</p>
+        <p> ciao</p>
+        <p> ciao</p>
+    </div>
+    <p> ciao </p>
+
+    <h1> Marco </h1>
+    <p> fratello di Marco</p>
+</body>
+</html>

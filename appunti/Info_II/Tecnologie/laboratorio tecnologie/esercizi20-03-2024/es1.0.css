@@ -1,0 +1,37 @@
+div {
+    height: 50vh;
+    width: 50vh;
+    position: absolute;
+  }
+
+  div {
+    height: 50vh;
+    width: 50vh;
+    position: absolute;
+  }
+  
+  #one{
+    background-color: red;
+    top: 0;
+    left: 0;
+  }
+   #two {
+    background-color: blue;
+    top: 0;
+    left: 51vh;
+  }
+  
+  #three {
+    background-color: blue;
+    top: 51vh;
+    left: 0;
+  }
+  
+  #four {
+    background-color: red;
+    top: 51vh;
+    left: 51vh;
+  }
+
+
+  

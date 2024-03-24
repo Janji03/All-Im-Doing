@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova 6</title>
+</head>
+<body>
+    <!--
+        1)immagini vettorializzate 
+        2) immagini responsive 
+        
+    -->
+   <svg
+  version="1.1"
+  baseProfile="full"
+  width="300"
+  height="200"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="black" />
+  <circle cx="150" cy="100" r="90" fill="blue" />
+</svg> 
+
+<img src="/Info_II/Tecnologie/tropical/beach1.jpg"> 
+<header>
+    <picture>
+        <source media="(max-width: 400px)" srcset="/Info_II/Tecnologie/tropical/beach1.jpg">
+        <source media="(max-width: 800px)" srcset="/Info_II/Tecnologie/tropical/beach1.jpg">
+        <source media="(max-width: 1920)" srcset="/Info_II/Tecnologie/tropical/beach1.jpg">
+        <img src="/Info_II/Tecnologie/tropical/beach1.jpg" alt="spiaggia tropicale">
+    </picture>
+</header>
+
+
+</body>
+</html>

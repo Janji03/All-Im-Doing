@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prova 8</title>
+</head>
+<body>
+    <!--
+         Form
+    -->
+
+    <form action="inserimento dati.php" method="post"> <!--pagina lato server che si occupa di conservare i dati-->
+        <label for="prova"> Input di esempio</label>
+        <input type="text" name="prova">
+        <select name="3 numeri" >
+            <option value=""> seleziona</option>
+            <option value="1"> numero 1</option>
+            <option value="2"> numero 2</option>
+            <option value="3"> numero 3</option>
+        </select>
+        <textarea name="textarea" id="" cols="30" rows="10">
+        </textarea>
+        <button type="button"> ciao</button>
+    </form>
+
+    <label for="nomi"> Nomi</label>
+    <input list="nomi">
+    <datalist id ="nomi">
+        <option value="marco"></option>
+        <option value="antonio"></option>
+        <option value="paolo"></option>
+    </datalist>
+
+    <h1> Esempio Form</h1>
+    <form action="salva-dati.php" method="post">
+        <fieldset>
+            <legend> Dati Anagrafici</legend>
+            <label for="nome"> Nome</label>
+            <input type="text" name="nome" readonly required>
+            <label for="cognome"> Cognome</label>
+            <input type="text" name="cognome" disabled>
+            <label for="codice fiscale"> codice fiscale</label>
+            <input type="text" name="codice fiscale" maxlength="16" placeholder="inserire codice fiscale" required>
+        </fieldset>
+    </form>
+
+        <!--tipi di input-->
+        <fieldset>
+            <input type="password">
+            <input type="submit">
+            <input type="radio">
+            <input type="checkbox">
+            <input type="color">
+            <input type="date">
+            <input type="email">
+            <input type="file">
+        </fieldset>
+
+ 
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Io che imparo CSS</title>
+
+    <link rel="stylesheet" href="style.css"> <!-- file esterno css-->
+
+    <style>
+        span{
+            background-color: bisque;
+        }
+    </style>  <!-- css interno-->
+
+
+</head>
+<body>
+    <!--
+        come implementare CSS: 
+        file esterno, css interno, css inline
+        come funziona CSS in pratica: 
+        viene caricata la pagina HTML, viene letta la pagina HTML
+        viene caricata la pagina CSS viene letee la pagina CSS
+        viene creato il DOM 
+        viene mostrato a schermo
+        cos'è il DOM:
+        è una struttura ad albero che prende i componenti del file HTML
+        e li trasforma in nodi (puoi cercare un'immagine della struttura online) 
+
+        caniuse.com : ti mostra quali browser supportano una determinata regola di CSS che 
+        usi e quali no
+
+    -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 style="color: red;">Titolo Principale</h1>
+
+    <section>
+        <h2>Sottotitolo 1</h2>
+        <p>Questo è un <span> colora questa parte con regola CSS </span> paragrafo di esempio.</p>
+    </section>
+
+    <section>
+        <h2>Sottotitolo 2</h2>
+        <p>Questo è un altro <div>questo div colorato di viola</div> paragrafo di esempio.</p>
+    </section>
+
+    <footer>
+       <p> Questo è un footer di esempio </p>
+    </footer>
+</body>
+</html>
+
+  

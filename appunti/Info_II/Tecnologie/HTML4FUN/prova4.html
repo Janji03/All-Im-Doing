@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=p">
+    <title>Prova 4</title>
+</head>
+<body>
+    <!--
+        1) elemento video 
+        2) lavorare con piu formati
+        3) caratteristiche di video : width , height, autoplay, loop, muted, poster
+        4) elemento audio 
+        5) aggiungere sottotitoli ad un video
+    -->
+    <video src="4585214_Moon_Space_Lunar_1920x1080.mp4" controls  width="1000" height="300">
+        <p> il tuo browser non supporta video html5 </p>
+    </video>
+    
+    <video controls width="600" height="300" autoplay loop muted>
+        <source src="4585214_Moon_Space_Lunar_1920x1080.mp4" type="video/mp4">
+        <source src="4585214_Moon_Space_Lunar_1920x1080.webm" type="video/webm">
+        <p> il tuo browser non supporta video html5 </p>
+        <track kind= "subtitles" src="subttles_it.vtt" srclang="it">
+    </video>
+
+    <audio src="cenere.mp3" controls></audio>
+
+</body>
+</html> 

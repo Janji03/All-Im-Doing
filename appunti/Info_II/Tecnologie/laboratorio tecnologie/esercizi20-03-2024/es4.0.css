@@ -1,0 +1,60 @@
+
+
+/*First we select the element(s) we want to flex.
+section has three article children, so: 
+- section is the flex container (display: flex;)
+-- articles are the flex items (flex: n = 1,2,3...; we can also tell the minim size we want the columns) 
+
+The flex items work as multiple columns, each of the same height, and they flex towards the direction
+we want: 
+- if flex-direction: column; they will occupy each one row as a full column
+- if flex-direction: row; they will try to occupy as much of the row as possible with multiple columns
+- flex-wrap tells if the columns must wrap based on some width rule
+
+*/
+
+section {
+    display: flex;
+    flex-direction: row;
+    /*flex-direction: row-reverse;*/
+    flex-wrap: wrap;
+  
+    /*flex-direction: column;*/
+  }
+  
+  html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header {
+    background: purple;
+    height: 100px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    line-height: 100px;
+    margin: 0;
+  }
+  
+  article {
+    padding: 10px;
+    margin: 10px;
+    background: aqua;
+    flex: 1 300px; 
+    /*minimum 300px*/
+    /*each article takes only 1 part*/
+    /*automatically responsive*/
+  }
+  
+  /* article:nth-of-type(3) {
+    flex: 2 300px;
+  }
+    /*the 2/1 units mean that the element shall take the space after the dimensions are computed*/
+  
+  
