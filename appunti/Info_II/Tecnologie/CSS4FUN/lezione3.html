@@ -3,20 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Box Model </title>
+    <title>Box Model</title>
 
     <style>
+        .box{
+            padding: 20px;
+            border: solid 1px black;
+            margin: 20px;
+            height: 200px;
+            width: 200px;
+            background-color: crimson;
+        }
 
-
-
+        .span{
+            padding: 10px;
+            border: solid 10px red;
+            margin: 500px;
+            height: 500px;
+            width: 100px;
+            background-color: aquamarine;
+        }
     </style>
 
-
 </head>
-
 <body>
-
-    <!--
+          <!--
         tutto in css è una scatola (o una scatola contenuta in un'altra)
         e si possono comportare in 2 modi: block e inline box
 
@@ -28,14 +39,18 @@
         width and height non vengono rispettate 
         vertical padding, margin e border si applicano ma non spostano altri elemnti 
 
+        display interno : inner e display esterno: outer
+        
+        content-box e border-box : 
 
+        inline block
 
     -->
 
-    <h1> titolo </h1>
-    <p> block </p>
-    <a href="#" style="padding-left : 60px; padding-top: 60px; padding-right: 20px; padding-bottom: 100px;"> inline </a>
+    <div class="box"> sono il contenuto di box</div>
+    <span class="span"> sono uno span </span>
     
-</body>
 
+
+</body>
 </html>

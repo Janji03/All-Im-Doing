@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgrounds and Borders</title>
+
+    <style>
+        .box{
+            width: 500px;
+            height: 300px;
+            border: solid black 1px;
+        }
+        .bg-color{
+            background-color: crimson;
+        }
+
+        .bg-image{
+            background-image: url(https://images2.alphacoders.com/546/thumb-1920-546678.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+        }
+
+        .box-star{
+            width: 200px;
+            height: 200px;
+            border: solid 1px red;
+            margin-right: 500px;
+            margin-bottom: 200px;
+            margin-left: 700px;
+            background-image: url(https://cdn3.vectorstock.com/i/1000x1000/17/87/cartoon-little-star-vector-2741787.jpg);
+            background-size: 50px;
+            background-repeat: repeat;
+            background-position: left;
+        }
+        .box-gradiente{
+            background-image: linear-gradient(115deg, rgba(0,249,255,1), rgba(51,56,57,1) 96%);
+        }
+
+        .bg-attach{
+            background-image: url(https://cdn1.epicgames.com/ue/product/Screenshot/Screenshot11-1920x1080-97edf232d2c2d6bb5cf730771d957f7d.jpg?resize=1&w=1920);
+            height: 3000px;
+            background-repeat: repeat;
+            background-attachment: scroll;
+            background-size: contain;
+            
+        }
+
+        .border{
+            border: solid black 10px;
+            border-style: dashed;
+            border-radius: 50%;
+        }
+        
+    </style>
+
+    <style></style>
+</head>
+<body class="bg-attach">
+    
+    <!--
+        background color : puo essere esadecimale ,rgb, rgba
+        background image, repeat, size, positon
+        background e gradiente
+        multiple immagini di background
+    -->
+
+    <div class= "box bg-color bg-image border"> <strong>div di prova</strong></div>
+
+    <div class="box-star box-gradiente"> altro div con stellina</div>
+
+</body>
+</html>
