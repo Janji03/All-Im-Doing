@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabella delle nazioni</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<style>
+
+    table{
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+
+    }
+   /* thead th:nth-child(1){
+        width: 30%;
+    }
+    thead th:nth-child(2){
+        width: 20%;
+    }
+    thead th:nth-child(3){
+        width: 15%;
+    }
+    thead th:nth-child(4){
+        width: 30%;
+    }
+    thead th:nth-child(5){
+        width: 30%;
+    }
+    thead th:nth-child(6){
+        width: 30%;
+    } */
+
+    th,td{
+        padding: 20px;
+    } 
+
+    
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+      
+tbody tr:nth-child(even){
+    background-color: lightblue;
+}
+tbody tr:nth-child(odd){
+    background-color: white;
+}
+
+h2{
+    border: solid 1px black;
+    padding: 20px;
+    background-color: lightblue;
+    opacity: 50%;
+}
+
+</style>
+
+</head>
+<body>
+
+
+    <!--
+        spacing and layout
+        zebra striping
+
+
+    -->
+
+<h2>Tabella delle nazioni</h2>
+
+<table>
+  <tr>
+    <th>Nazione</th>
+    <th>Popolazione</th>
+    <th>Capitale</th>
+    <th>Continente</th>
+  </tr>
+  <tr>
+    <td>Italia</td>
+    <td>60,359,546</td>
+    <td>Roma</td>
+    <td>Europa</td>
+  </tr>
+  <tr>
+    <td>Stati Uniti</td>
+    <td>331,002,651</td>
+    <td>Washington D.C.</td>
+    <td>Americhe</td>
+  </tr>
+  <tr>
+    <td>Cina</td>
+    <td>1,439,323,776</td>
+    <td>Pechino</td>
+    <td>Asia</td>
+  </tr>
+  <tr>
+    <td>Brasile</td>
+    <td>212,559,417</td>
+    <td>Brasilia</td>
+    <td>Americhe</td>
+  </tr>
+  <tr>
+    <td>Nigeria</td>
+    <td>206,139,589</td>
+    <td>Abuja</td>
+    <td>Africa</td>
+  </tr>
+</table>
+
+</body>
+</html>
