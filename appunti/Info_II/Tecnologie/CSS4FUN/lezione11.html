@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Testo e stile liste</title>
+    <style>
+        
+        p{
+            color: red;
+            font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 20px;
+            font-style: italic;
+            font-weight: 800; /* grandezza del grassetto*/
+            text-transform: lowercase;
+            text-decoration: underline;
+            text-shadow: 4px/*distanza orizzontale dell'ombra*/ 4px/*distanza verticale dell'ombra*/ 5px/*grado di blur*/ red;
+            line-height: 5px; /* distanza tra una riga e l'altra */
+            letter-spacing: 1px;
+        }
+
+        dd,
+        dt{
+            line-height: 1.5;
+        }
+        dt{
+            font-weight: bold;
+        }
+
+        ul{
+            list-style-type: square;
+        }
+
+        ol{
+            list-style-type: decimal;
+        }
+       /* li{
+            list-style-position: inside;
+            background-image: url(https://yt3.googleusercontent.com/ytc/AIdro_nXDxz5p1C3naiFix9a-4EBHjV3zaCC_vME81jt=s900-c-k-c0x00ffffff-no-rj);
+            background-position: 0 0;
+            background-size: 1rem 1rem;
+            background-repeat: no-repeat;
+            list-style-type: none;
+        } */
+      
+
+    </style>
+</head>
+<body>
+    <!--
+        font-family: default font, web safe font (supportati da tutti i sitemi operativi), font stack
+        si mettono piu font di fila in font-family in modo che se non funziona il primo prova con gli altri
+        
+        modificare stile liste: ul, ol, dl
+    -->
+    <h1> esempio titolo</h1>
+    <p> paragrafo di esempio</p>
+    <p> paragrafo di esempio</p>
+    <p> paragrafo di esempio</p>
+    <p> paragrafo di esempio</p>
+    <p> paragrafo di esempio</p>
+
+    <ul>
+        <li> elemento</li>
+        <li> elemento</li>
+        <li> elemento</li>
+        <li> elemento</li>
+    </ul>
+    <ol start="10" reversed>
+        <li>ciaooooo</li>
+        <li>ciaooooo</li>
+        <li value="79">ciaooooo</li>
+    </ol>
+
+    <dl>
+        <dt> description list </dt>
+        <dd>descrizione lista febpoefoèbmeèobmeèob</dd>
+        <dt> description list </dt>
+        <dd>descrizione lista febpoefoèbmeèobmeèob</dd>
+        <dt> description list </dt>
+        <dd>descrizione lista febpoefoèbmeèobmeèob</dd>
+        <dt> description list </dt>
+        <dd>descrizione lista febpoefoèbmeèobmeèob</dd>
+    </dl>
+    
+</body>
+</html>
