@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione a Layout</title>
+
+    <style>
+        .flex-wrapper{
+            display: flex;
+        }
+
+        .flex-wrapper>div{
+            padding: 20px;
+            margin: 5px;
+            background-color: salmon;
+        }
+        .gird-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px;
+            
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <!--
+        normal flow 
+        display proprety : block, inline, flex, grid
+        flexbox : display flex, flex-direction
+    -->
+
+    <h1> flexbox layout </h1>
+    <div class="flex-wrapper">
+        <div class="box1">one</div>
+        <div class="box2">two</div>
+        <div class="box3">three</div>
+    </div>
+
+    <h1> grid layout</h1>
+    <div class="grid-wrapper">
+    <div class="gbox1"> one</div>
+    <div class="gbox2"> two</div>
+    <div class="gbox3"> three</div>
+    <div class="gbox4"> four</div>
+    <div class="gbox5"> five</div>
+    </div>
+
+</body>
+</html>
