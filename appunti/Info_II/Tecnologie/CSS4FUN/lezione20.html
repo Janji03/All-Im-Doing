@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple-column layout</title>
+    <style>
+
+        body{
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px;
+        }
+        .container{
+            column-count: 3;
+            column-gap: 20px;
+            /*column-rule: 5px solid black; */
+        }
+
+        .ads{
+            background-color: lightseagreen;
+            color: white;
+            column-span: all;
+            margin: 20px 0;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!--
+
+    -->
+    <div class="container">
+        <h1> esempio di prova</h1>
+        <div class="ads">pubblicità</div>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
+        </p>
+     
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa
+        </p>
+    </div>
+</body>
+</html>

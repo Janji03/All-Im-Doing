@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid layout</title>
+
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,auto));
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        .box{
+            background-color: orange;
+            opacity: 50%;
+        }
+    </style>
+
+
+</head>
+<body>
+    <!--
+        una pagina si divide in 12 colonne
+        autofill
+
+    -->
+    
+    <div class="container">
+        <div class="box"> esempio</div>
+        <div class="box"> esempio</div>
+        <div class="box"> esempio</div>
+        <div class="box"> esempio</div>
+        <div class="box"> esempio</div>
+        <div class="box"> esempio</div>
+    </div>
+
+
+</body>
+</html>

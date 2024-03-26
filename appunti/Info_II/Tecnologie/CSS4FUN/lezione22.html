@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        p{
+            background-color: white;
+            padding: 20px;
+            width: auto;
+
+        }
+    
+        @media (orientation: landscape){
+            body{
+                background-color: purple;
+            }
+        }
+        @media (orientation: portrait){
+            body{
+                background-color: yellow;
+            } 
+        }
+        @media (hover: hover){
+            body{
+                background-color: green;
+            } /*hover guarda solo i dispositivi che hanno un mouse con un cursore quindi non influisce sui mobile devices*/
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!--
+        di base le media query possono non essere quasi mai utilizzate se usi flex-box css-grid etc
+        però si usano ancora molto quindi vanno sapute RIP
+        tipi di media query : all, print, sreen, speech
+        portrait e landscape
+        logica AND OR NOT: operatori logici che si possono usare sui @media
+        
+    -->
+    <p>
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    </p>
+    
+</body>
+</html>

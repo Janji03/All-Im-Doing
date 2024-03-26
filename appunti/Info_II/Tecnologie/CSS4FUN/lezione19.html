@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positioning</title>
+    <style>
+
+        body{
+            padding: 50px;
+            position: relative;
+        }
+        .box{
+            border-radius: 10px;
+            border: solid 5px crimson;
+            background-color: lightsalmon;
+            height: 100px;
+            width:  80%;
+            margin: 20px;
+        }
+        .uno, .due{
+            position: absolute;
+            
+        }
+        .due{
+            background-color: black;
+            top: 10px;
+        }
+        .uno{
+            z-index: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        static
+        relative
+        absoute
+        contesto
+        z-index (quando due elementi sono sovrapposti si vede a schermo quello che ha il valore z-index maggiore)
+        position fixed
+        position sticky
+    -->
+    <div class="box uno"></div>
+    <div class="box due"></div>
+    <div class="box tre"></div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive design</title>
+    <style>
+        p{
+            background-color: lightblue;
+            padding: 20px;
+            width: 1500px;
+            font-size: 3vw
+        }
+        @media (max-width: 1500px){
+            p{
+                width: auto; 
+            }
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,auto));
+            grid-template-rows: auto;
+            gap: 10px;
+        }
+        .box{
+            background-color: orange;
+            opacity: 50%;
+        }
+        @media screen and (max-width : 500px){
+          .box{
+            width: auto;
+          }
+        }
+       
+        .responsive-image {
+            max-width: 100%; /* Imposta la larghezza massima dell'immagine al 100% della larghezza del suo contenitore */
+            height: auto; /* Imposta l'altezza su "auto" per mantenere le proporzioni originali */
+        }
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <!--
+        è un approccio che usa quando si fa un sito e consiste nel garantire che il sito sia fruibile da piu dispositivi
+        media query
+        flexible grid
+        multi-column  flex-box e  css-grid (tecnologie moderne per responsive design)
+        typography : 
+        meta-tag :   <meta name="viewport" content="width=device-width, initial-scale=1.0"> cosa significa questo meta-tag?
+        il contenuto deve essere della larghezza dello schermo e la scalatura è quella di default
+
+    -->
+    <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa</p>
+
+        <div class="container">
+            <div class="box"> esempio</div>
+            <div class="box"> esempio</div>
+            <div class="box"> esempio</div>
+            <div class="box"> esempio</div>
+            <div class="box"> esempio</div>
+            <div class="box"> esempio</div>
+        </div>
+
+        <img class="responsive-image" src="https://cdn5.vectorstock.com/i/1000x1000/23/19/cute-yellow-smiling-little-star-on-blue-vector-23212319.jpg" alt="stella">
+
+</body>
+</html>
