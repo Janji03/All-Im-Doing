@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bottone {
+            font-family: "helvetica neue", helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid rgb(200 200 0 / 60%);
+            background-color: rgb(0 217 217 / 60%);
+            color: rgb(100 0 0 / 100%);
+            box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+          }
+    </style>
+</head>
+<body>
+    <title id="title">Prova</title>
+    <button class="bottone"> Saluta</button>
+    <script>
+        let button = document.querySelector('button');
+        let title = document.getElementById('title'); 
+        function saluta(){
+            title.innerHTML ="CIAOO";
+            console.log("ciaoo");
+        }
+        button.addEventListener('click' , ()=>{
+            saluta();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione JS</title>
+    <style>
+        button {
+            font-family: "helvetica neue", helvetica, sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid rgb(200 200 0 / 60%);
+            background-color: rgb(0 217 217 / 60%);
+            color: rgb(100 0 0 / 100%);
+            box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
+            border-radius: 10px;
+            padding: 3px 10px;
+            cursor: pointer;
+          }
+          
+    </style>
+</head>
+<body>
+   <!--
+
+    introduzione a JS
+    API = apllication programming interfaces 
+    js è un linguaggio interpretato e non compilato
+    client side vs server side: client è il codice che viene scaricato ed eseguito direttamente sul browser (tipo animazioni della pagina o altre robe)
+    mentre server è eseguito su un server e il client riceve solo la "risposta" dopo che è stato eseguito quel codice (esempio quando fai il login sui social)
+    javascript è nato come linguaggio client side ma c'è nodeJS che fa da server side ed è simile a javascript
+    pagina statica vs dinamica
+    come aggiungere js : interno,esterno,inline 
+    interno : metto <script> in head o body
+    esterno :   
+    inline : sconsigliato
+    strategie di caricamento
+    DOMContentLoaded : è una funzione che si assicura che tutto il DOM sia stato creato prima di eseguire codice js
+    ASYNC (indipendente) : utile quando abbiamo script che fanno cose diverse e quindi possono essere eseguiti in modo indipendente 
+    DEFER (in ordine) : esegue gli script in ordine ed è utile quando abbiamo magari funzioni che devono essere eseguite in modo dipendente dalle altre oppure condividono 
+    variabili etc
+    commenti //
+
+
+    Variabili:
+    let e var
+    tipi : numeri, stringhe, boolean, array*, oggetti*
+    const 
+
+    Numeri e operatori:
+    diversi tipi ma per js è tutto number
+    .toFixed(2) = 2 decimali vuoi dopo la virgola
+
+    Stringhe
+    metodi stringhe
+
+
+    Array 
+    come convertire stringhe e array : split() converte da stringa ad  array viceversa join() 
+    push() pop() lavorano in coda unshift() shift() lavorano in testa
+
+    Condizionali:
+    if else 
+    else if
+    switch
+    ternary operator (condition) ? si : no
+
+    Loop:
+    continue : metti una condzione che se è vera scrivi continue e ti skippa quella iterazione
+
+    Funzioni:
+    funzioni del browser : string.replace , array.join, math.random
+    funzioni vs metodi (le funzioni degli oggetti)
+    funzioni anonime 
+    document.querySelector('h1') metti in una variabili dello script un elemento di html
+
+   --> 
+   <button type="button">Player 1: Chris</button>
+   <button> Saluta </button>
+   <script>
+   //const button = document.querySelector("button");
+   let button = document.querySelector(button);
+
+button.addEventListener("click", updateName);
+
+function updateName() {
+  const name = prompt("Enter a new name");
+  button.textContent = `Player 1: ${name}`;
+}
+
+  let name = 'Janji';
+  let ciao = ['prova1','prova2','prova3']
+  let persona={
+    nome :'giangi',
+    cognome : 'casaburi',
+    eta : 20
+
+  };
+
+  console.log(name);
+  console.log(ciao[0]);
+  console.log(persona.eta);
+
+  /*
+  let testo ='stringa di prova su sito' + ' ' + 22;
+  let elemento = '<h1>${testo}</h1>'; */
+ // document.body.innerHTML = testo;
+
+  button,addEventListener('click', ()=>{
+    saluta();
+  })
+
+  function saluta(){
+    title.innerHTML = "CIAOOOO";
+    consol.log("ciaooo");
+  }
+  
+
+
+</script>
+
+
+<script src="filejs.js"></script>
+
+
+
+</body>
+</html>
