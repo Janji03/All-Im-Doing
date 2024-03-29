@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+
+    <!--
+        cosa sono API 
+        si dividono in client-side e server-side 
+        client-side:
+        browser APIs : sono gli API costruiti nel broswer con js
+        third-part APIs : vengono incorporati nel browser
+        
+        che relazione c'è tra js API e js tools? ci sono 5 livelli:
+        primo livello : js
+        secondo livello : browser APIs
+        terzo livello : third-part APIs
+        quarto livello : js libraries
+        quinto livello : js frameworks
+
+        API si basano su oggetti
+
+        API per manipolazione di documenti:
+        DOM 
+
+
+    -->
+    <button id="bottone" class="prova">Bottone</button>
+    <div class="prova"></div>
+    <span class="prova"></span>
+
+    <script>
+        //prende elemento dal DOM con l'id che metti
+        let x = document.getElementById('bottone');
+
+        //prende elemento dal DOM e puoi mettere o l'elemento 'button' o l'id (#bottone) o la classe (.prova)
+        let y = document.querySelector('button');
+        let z = document.querySelector('#bottone');
+        let k = document.querySelector('.prova');
+
+        //ritornano una node list (array di elementi)
+        //prende tutti gli elementi con un dato selettore
+        let w = document.querySelectorAll('.prova');
+        console.log(w);
+        //prende elemento per il nome della classe
+        let j = document.getElementsByClassName('prova');
+
+
+        //creare nuovi nodi
+        const div = document.querySelector('div');
+        //crea un elemento paragrafo mentre il programma va, quindi non è un paragrafo scritto a mano in html ma è dinamico
+        const paragrafo = document.createElement('p');
+        //scriviamo del testo nel paragrafo a run time
+        paragrafo.textContent = 'elemento creato dinamicamente';
+        // mettiamo il paragrafo nel div
+        div.appendChild(paragrafo);
+
+        // ho creato un nuovo node (diverso e distinto da p)
+        const extraTesto = document.createTextNode(' altra parte di testo');
+        paragrafo.appendChild(extraTesto);
+
+        //spostare e rimuovere nodi
+        //appendere elemento nella parte del DOM che vuoi 
+        document.body.appendChild(paragrafo);
+
+        //rimuovere un nodo
+        paragrafo.removeChild(extraTesto);
+        //altro modo per rimuovere 
+        extraTesto.remove();
+
+        //Manipolare stili dei selettori con js
+        paragrafo.style.background = 'red';
+
+        //aggiungere attributi
+        //nome attributo, valore attributo
+        paragrafo.setAttribute('data-value', 'ciao');
+        console.log(paragrafo.getAttribute('data-value'));
+
+    </script>
+    
+</body>
+</html>
