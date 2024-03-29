@@ -6,7 +6,39 @@
     <title>Async e await</title>
 </head>
 <body>
+   <!--
+    rendono il codice visivamente sincrono ma effettivamente asincrono 
+    si possono rendere le funzioni asincrone semplicemente con async e await
+   --> 
+  <script>
+    async function hello(){
+        return 'hello';
+    }
+    console.log(hello());
+
+    let prova = async function(){}; //sintassi standard
+    let prova1 = async ()=> {return 'ciao'}; //sintassi standard
+
+    //come prendere il valore di una funzione async
+    hello().then((value) =>{
+        console.log(value);
+    });
+
+    // await
+    // dice che una variabile (in questo caso x) è uguale ad un valore che stiamo aspettando
+    async function ciao(){
+        return x = await Promise.resolve('ciao');
+    }
+    ciao().then(console.log);
+
+   // gli errori si gestiscono con try e catch
+   // promise.all() fa un array di promise e fa await su tutte
+   // async e await si possono fare anche nei metodi delle classi
     
+      
+
+
+  </script> 
     
 </body>
 </html>
