@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <!--
+        Json: javascript Object Notation
+        è uno standard di passaggio dati basato sul testo che rappresenta dati strutturati
+        il processo è: faccio un oggetto con dei dati lo trasformo in json che sarebbe una stringa e poi diventano di nuovo dati
+        json è una stringa ha solo proprietà e non metodi
+        si usano solo doppi apici e non singoli 
+
+
+    -->
+
+    <script>
+        // come fare la richesta :
+        /*
+        
+        */
+        let requestURL = './superheros.json';
+        let request = new XMLHttpRequest();
+        request.open('GET',requestURL);
+        request.responseType = 'json';
+        request.send();
+
+        request.onload = function(){
+            const hero = request.response;
+            console.log(hero.formed);
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    
+    <!--
+        cosa sono le promise: 
+        in modo asincrono viene fatto qualcosa e abbiamo la promessa che ci ritornerà un valore/qualcosa
+        indica uno state
+
+    -->
+
+
+    <script>
+       
+        // sintassi scrausa
+        chooseToppings(function(toppings){
+            placeOrder(toppings, function(order){
+                collectOrder(order, function(pizza){
+                    eatPizza(pizza);
+                }, failureCallback);
+            }, failureCallback);
+        }, failureCallback);
+
+        // sintassi normale
+        chooseToppings()
+            .then(function(toppings){
+                return placeOrder(toppings);
+        })
+            .then(function(order){
+                return collectOrder(order);
+        })
+            .then(function(pizza){
+                return eatPizza(pizza);
+        })
+        .catch(failureCallback);
+
+        //sintassi con =>
+        chooseToppings()
+            .then(toppings =>{
+                return placeOrder(toppings);
+        })
+            .then(order =>{
+                return collectOrder(ordeer);
+        })
+            .then(pizza =>{
+                return eatPizza(pizza);
+        })
+        .catch(failureCallback);
+
+
+
+
+
+        
+    </script>
+
+
+
+
+
+</body>
+</html>

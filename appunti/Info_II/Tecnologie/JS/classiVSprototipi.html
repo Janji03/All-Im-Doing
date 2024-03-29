@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classi e prototipi</title>
+</head>
+<body>
+
+    <!--
+        prototipi no sense da studiare perchè ormai ci sono le classi che sono easier 
+    -->
+
+    <script>
+        class Persona {
+            constructor (nome,cognome,eta){
+            this.nome = nome;
+            this.cognome = cognome;
+            this.eta = eta;
+            };
+            saluta(){
+                console.log('ciao sono ' + this.nome);
+            };
+        };
+        
+        class Insegnante extends Persona{
+            constructor(nome, cognome, eta, materia){
+            super(nome,cognome,eta);
+            this.materia = materia;
+            };  
+        };
+
+        const insegnante1 = new Insegnante('Carla','Rossi',60,'Matematica');
+        console.log(insegnante1);
+        insegnante1.saluta();
+
+        
+    </script>
+    
+</body>
+</html>

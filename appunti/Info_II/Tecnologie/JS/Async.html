@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+
+    <!--
+        programmazione asincrona :
+        blocking code 
+        js nasce come single thread ovvero esegue un processo alla volta ma sono stati introdotti dei framework per cui
+        main thread (processo principale), worker threads
+        fetch e promise
+        set timeout 
+        set Interval
+    -->
+    <p id="demo"></p>
+
+<script>
+        fetch('superheros.json').then(function(response){
+            return response.json();
+        }).then(function(json){
+            hero = json;
+            console.log (hero.formed)
+        }).catch(function(err){
+            console.log('fetch problem');
+        });
+
+        let prova = setTimeout(saluta,3000);
+        function saluta(){
+            alert('ciao da timeout');
+        }
+
+        function displaytime(){
+            let data = new Date();
+            console.log(data);
+            let time = data.toLocaleTimeString();
+            document.getElementById('demo').textContent = time;
+        }
+
+        const createClock = setInterval(displaytime,1000);        
+</script>
+    
+</body>
+</html>
