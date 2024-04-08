@@ -7,4 +7,8 @@ JavaScript
 
 
 ## da fare
+***client-side***  
+angular,react,vue  
+
+***server-side***  
 NodeJS
