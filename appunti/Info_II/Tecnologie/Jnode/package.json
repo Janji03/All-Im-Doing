@@ -1,0 +1,17 @@
+{
+  "name": "prova",
+  "version": "0.0.1",
+  "description": "## lezione 1 : intro ## lezione 2 : globali  ## lezione 3 : moduli interni ## lezione 4 : moduli built-in ## lezione 5 : modulo FS",
+  "main": "lezione1.js",
+  "scripts": {
+    "start": "nodemon lezione12.js"
+  },
+  "author": "giangi",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
