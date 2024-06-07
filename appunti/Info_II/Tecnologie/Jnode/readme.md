@@ -20,3 +20,5 @@
 # lezione 18 : Query String Parameter
 # lezione 19 : Middleware
 # lezione 20 : Postman
+# lezione 21 : API : metodo GET POST PUT DELETE 
+# lezione 22 : Routing 

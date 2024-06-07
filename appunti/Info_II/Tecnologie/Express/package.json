@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "lezione14.js",
   "scripts": {
-    "myscriptnodemon" : "nodemon lezione19.js"
+    "myscriptnodemon" : "nodemon lezione21.js"
   },
   "keywords": [],
   "author": "",
