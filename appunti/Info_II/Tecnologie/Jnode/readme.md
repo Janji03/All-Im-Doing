@@ -16,3 +16,7 @@
 ## lezione 14 : Express
 ## lezione 15 : API vs SSR
 ## lezione 16 : express json 
+## lezione 17 : parametri route 
+# lezione 18 : Query String Parameter
+# lezione 19 : Middleware
+# lezione 20 : Postman
