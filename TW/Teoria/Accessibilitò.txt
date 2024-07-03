@@ -1,0 +1,172 @@
+Domande Teoria Accessibilità:
+
+Scrivere il codice HTML ed i frammenti di codice JavaScript necessari per
+implementare il menu rappresentato dalla struttura ad albero seguente.
+panini {
+    panini con carne
+    panini vegetariani
+}
+pizze
+modalità di pagamento
+
+La voce “panini” deve fungere come “toggle” per la visibilità delle sue voci
+figlie “panini con carne” e “panini vegetariani” che, quando appare la pagina
+web, non devono essere visibili.
+Il menu deve rispettare tutti i criteri di accessibilità; non è possibile utilizzare
+il codice JavaScript di Bootstrap.
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu ad Albero</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .toggle-button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <span id="toggle-panini" class="toggle-button" aria-expanded="false" role="button" tabindex="0">panini</span>
+                <ul id="panini-submenu" class="hidden" aria-hidden="true">
+                    <li>panini con carne</li>
+                    <li>panini vegetariani</li>
+                </ul>
+            </li>
+            <li>pizze</li>
+            <li>modalità di pagamento</li>
+        </ul>
+    </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleButton = document.getElementById('toggle-panini');
+            const submenu = document.getElementById('panini-submenu');
+            
+            function toggleSubmenu() {
+                const isHidden = submenu.classList.contains('hidden');
+                if (isHidden) {
+                    submenu.classList.remove('hidden');
+                    submenu.setAttribute('aria-hidden', 'false');
+                    toggleButton.setAttribute('aria-expanded', 'true');
+                } else {
+                    submenu.classList.add('hidden');
+                    submenu.setAttribute('aria-hidden', 'true');
+                    toggleButton.setAttribute('aria-expanded', 'false');
+                }
+            }
+            
+            toggleButton.addEventListener('click', toggleSubmenu);
+            toggleButton.addEventListener('keydown', function (event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleSubmenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+---------------------------------------------------------------------------------
+
+Considerare il codice HTML che segue:
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example Website</title>
+    </head>
+    <body>
+        <h1>Welcome to our website!</h1>
+        <img src="logo.jpg" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <form>
+            <label>Search query:</label>
+            <input type="text">
+            <input type="submit" value="Search" aria-label="Open contact form">
+        </form>
+    </body>
+</html>
+Indicare almeno tre problemi di accessibilità presenti nel codice, spiegando
+come possono essere risolti.
+
+- Attributo alt dell'immagine
+- La label non è legata all'input
+
+--------------------------------------------------------------------------------------
+
+Fornire il codice HTML che implementi la struttura della HomePage del sito
+“aziendaqualunque.it” come da specifiche sotto riportate, e rispetti tutti i
+criteri di accessibilità.
+Nella homePage sono presenti tre sezioni distinte: - l’intestazione; - il corpo
+(area principale); - il footer.
+Nell’intestazione sono presenti il logo dell’azienda ed un menu di
+navigazione che contiene tre link, rispettivamente alle pagine “home” (la
+stessa HomePage), “chi siamo”, e “contattaci”.
+Nel corpo (area principale), invece, è presente il titolo della pagina seguito da
+alcuni paragrafi di testo (a piacere).
+Nel footer, infine, è presente un altro menu di navigazione con due link,
+rispettivamente alle pagine “Informativa sulla Privacy”, e “Informativa
+sull’uso dei cookie”.
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Azienda Qualunque</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="logo azienda qualunque">
+        <nav aria-label="Menu principale">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Chi Siamo</a>
+                </li>
+                <li>
+                    <a href="#">Contattaci</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Benvenuti su Azienda Qualunque</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec semper lorem, a vulputate mauris. Curabitur at leo ac leo bibendum laoreet.</p>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed fermentum nisl non diam interdum, sit amet varius ex dictum.</p>
+        <p>Integer sit amet metus sed neque facilisis convallis. Nam vitae magna vel quam aliquet placerat ac non odio.</p>
+    </main>
+    <footer>
+        <nav aria-label="Menu del footer">
+            <ul>
+                <li>
+                    <a href="#">Informativa sulla Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Informativa sull'uso dei cookie</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------

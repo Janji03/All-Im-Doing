@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Drum Kit</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="title">Drum 🥁 Kit</h1>
+  <div class="set">
+    <button class="w drum">w</button>
+    <button class="a drum">a</button>
+    <button class="s drum">s</button>
+    <button class="d drum">d</button>
+    <button class="j drum">j</button>
+    <button class="k drum">k</button>
+    <button class="l drum">l</button>
+  </div>
+
+
+<script src="index.js" charset="utf-8"></script>
+
+<footer>
+  Made with ❤️ in London.
+</footer>
+</body>
+  <script>
+    // Lista di tutti i bottoni con la classe "drum"
+const buttons = document.querySelectorAll('.drum');
+
+// Funzione per riprodurre il suono corrispondente
+function playSound(key) {
+  switch (key) {
+    case 'w':
+      var audio = new Audio('sounds/tom-1.mp3');
+      break;
+    case 'a':
+      var audio = new Audio('sounds/tom-2.mp3');
+      break;
+    case 's':
+      var audio = new Audio('sounds/tom-3.mp3');
+      break;
+    case 'd':
+      var audio = new Audio('sounds/tom-4.mp3');
+      break;
+    case 'j':
+      var audio = new Audio('sounds/snare.mp3');
+      break;
+    case 'k':
+      var audio = new Audio('sounds/crash.mp3');
+      break;
+    case 'l':
+      var audio = new Audio('sounds/kick-bass.mp3');
+      break;
+    default:
+      return; // Se il tasto non è mappato, esci dalla funzione
+  }
+  audio.play();
+}
+
+// Funzione per gestire l'animazione
+function buttonAnimation(currentKey) {
+  const activeButton = document.querySelector('.' + currentKey);
+
+    activeButton.classList.add('pressed');
+    setTimeout(function() {
+      activeButton.classList.remove('pressed');
+    }, 100);
+  
+}
+
+// Funzione per gestire i click sui bottoni
+buttons.forEach(button => {
+  button.addEventListener('click', function() {
+    const buttonInnerHTML = this.innerHTML;
+    playSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
+  });
+});
+
+// Funzione per gestire la pressione dei tasti sulla tastiera
+document.addEventListener('keydown', function(event) {
+  playSound(event.key);
+  buttonAnimation(event.key);
+});
+
+  </script>
+</html>

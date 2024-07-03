@@ -1,0 +1,50 @@
+Domande Teoria UTF-8:
+
+Occupa più byte un testo in inglese di 1000 caratteri, un testo in italiano di
+1000 caratteri o un testo in cinese di 500 caratteri, se tutti e tre vengono
+espressi in UTF-8? Perché?
+
+Dipende dal numero di caratteri in italiano rappresentabili in ASCII 
+
+--------------------------------------------------------------------------------
+
+Un file di testo multi-lingue inglese-arabo contiene 1000 caratteri di testo
+inglese e 1000 caratteri di testo in arabo. Ipotizzando che il testo sia codificato
+in UTF-8 e non vi siano parole in altre lingue, quanto sarà lungo in byte quel
+file? Se invece di 1000 caratteri in arabo ci fossero stati 1000 caratteri in cinese
+(assumendo che siano tutte parole comuni e di uso frequente) quale sarebbe la
+lunghezza?
+
+1000 * 1 + 1000 * 2 = 3000byte
+1000 * 1 + 1000 * 3 = 4000byte
+
+---------------------------------------------------------------------------------
+
+
+Quanti byte occupano le seguenti parole (che signifcano tutte felicità in varie
+lingue) se espresse in UTF-8?:
+• felicità (italiano) -> 7 * 1 + 1 * 2 = 9byte
+• ευτυχία (greco moderno) -> 7 * 2 = 14byte
+• happiness (inglese) -> 9 * 1 = 9byte
+• 幸福 (cinese) -> 2 * 3 = 6byte
+• щастя (ucraino) -> 5 * 2 = 10byte
+• Glück (tedesco) -> 2 * 1 + 1 * 2 + 2 * 1 = 6byte
+
+-------------------------------------------------------------------------------
+
+Quanti byte sono richiesti in UTF-8 per rappresentare le seguenti parole?
+• Mongolo: Сайн уу -> 4 * 2 + 1 * 1 + 2 * 2 = 13byte
+• Curdo: merheba -> 7 * 1 = 7byte
+• Polacco: CZEŚĆ -> 3 * 1 + 2 * 2 = 7byte
+• Portoghese: olá -> 2 * 1 + 1 * 2 = 4byte
+• Italiano: ciao -> 4 * 1 = 4byte
+• Afrikaans: hi -> 2 * 1 = byte
+
+-------------------------------------------------------------------------------
+
+Quanti byte sono richiesti in UTF-8 per rappresentare le seguenti parole?
+• Amarico: ሐብሐብ -> 4 * 2 = 8byte
+• Olandese: Watermeloen -> 11 * 1 = 11byte
+• Cinese: 西瓜 -> 2 * 3 = 6byte
+• Greco: καρπούζι -> 8 * 2 = 16byte  
+• Ceco: vodní meloun -> 4 * 1 + 1 * 2 + 7 * 1 = 13byte

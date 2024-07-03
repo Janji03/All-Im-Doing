@@ -1,0 +1,148 @@
+Domande Teoria Semantic Web RDF:
+
+Rappresentare in RDF i seguenti dati: “Angela Davis è nata a Birmingham,
+Alabama il 26 gennaio 1944. E’ autrice del libro “Donne, Razza e Classe”, del
+1981.” Potete usare un formato a vostra scelta tra Turtle, XML-RDF o
+JSON-LD.
+
+@prefix my: <...>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix anobii: <http://www.anobii.com/books/>.
+
+db:angela_davis
+    rdf:type foaf:person;
+    foaf:name "Umberto Eco";
+    foaf:born [
+        foaf:place my:birningam;
+        foaf:date '26 gennaio 1944'.
+        ];
+    foaf:made anobii:donne_razza_classe;
+    foaf:work my:autrice.
+
+my:birningam
+    a foaf:city;
+    foaf:state foaf:alabama.
+
+anobii:donne_razza_classe
+    a <http://purl.or/ontology/bibo/Book>;
+    foaf:title "donne razza classe";
+    foaf:relase_date "1981" .
+
+------------------------------------------------------------------------------
+
+Scrivere uno (o più) schema/schemata Mongoose che possa/no raccogliere
+tutte le informazioni della seguente descrizione: “Siamo lieti di informarvi
+che, ad una settimana da oggi, il 24 giugno, verrà proiettato il film”Il giardino
+di limoni - Lemon Tree” del regista Eran Riklis, al Cinema Ipotetico di Viale
+Santa Rosalia. L’entrata è gratuita fino all’esaurimento dei 250 posti
+disponibili. Il film drammatico, uscito nel 2008, dura 106 minuti”. NB: nel
+testo sono contenute circa 11 possibili informazioni strutturabili.
+
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const eventSchema = new Schema({
+    title: String,
+    director: String,
+    cinema: {
+        name: String,
+        address: String,
+    }
+    announcementDate: Date,
+    screeningDate: Date,
+    ticketInfo: {
+        price: String,
+        availableSeats: Number,
+    }
+    genre: String,
+    releaseYear: number,
+    durationMinutes: number,
+})
+
+--------------------------------------------------------------------------------
+
+Scrivere in Turtle il grafo RDF della seguente frase, poi dì quante triple
+contiene: «Piazza Barberini è una piazza dell’attuale centro storico di Roma
+situata nella sella tra il colle Quirinale e gli Horti Sallustiani, in cima alla salita
+di via del Tritone e all’incrocio con la strada Felice.».
+
+@prefix ex: <http://example.org/> . // prefisso ex che abbrevia tutti gli URI che iniziano con <http...
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+
+ex:PiazzaBarberini a ex:Piazza ;
+    ex:location ex:CentroStoricoDiRoma ;
+    geo:locatedBetween ex:ColleQuirinale, ex:HortiSallustiani ;
+    geo:locatedAtTopOf ex:ViaDelTritone ;
+    geo:atIntersectionOf ex:StradaFelice .
+
+ex:CentroStoricoDiRoma a ex:CentroStorico ;
+    ex:current ex:CurrentStatus .
+
+ex:ColleQuirinale a ex:Colle .
+ex:HortiSallustiani a ex:Giardino .
+ex:ViaDelTritone a ex:Strada .
+ex:StradaFelice a ex:Strada .
+
+-----------------------------------------------------------------------------------------
+
+Scrivere in Turtle il grafo RDF della seguente frase, poi specificare quante
+triple contiene: «La 10/24 PS era un’autovettura di fascia alta prodotta dalla
+Casa automobilistica tedesca Opel dal 1911 al 1916.».
+
+La "10/24 PS" è un’autovettura.
+La "10/24 PS" è di fascia alta.
+La "10/24 PS" è prodotta da "Opel".
+La produzione della "10/24 PS" è iniziata nel 1911.
+La produzione della "10/24 PS" è terminata nel 1916.
+"Opel" è una Casa automobilistica.
+"Opel" è tedesca.
+
+@prefix my: <...> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+
+
+my:10_24_PS 
+    rdf:type dbo:car ;
+    my:fascia "luxury" ;
+    foaf:name "10/24 PS" ;
+    dbo:manufacturer dbr:Opel ;
+    my:productionStartYear "1911" ;
+    my:productionEndYear "1916" .
+    
+my:opel
+    rdf:type dbo:car_manufacturer ;
+    foaf:name "Opel" ;
+    dbo:country dbr:Germany .
+
+-------------------------------------------------------------------------------------------------
+
+Scrivere in Turtle il grafo RDF della seguente frase, poi specificare quante
+triple contiene: «R. Madhavan, pseudonimo di Madhavan Balaji Ranganathan
+(Jamshedpur, 1º giugno 1970), è un attore e produttore cinematografico
+indiano.».
+
+Madhavan Balaji Ranganathan è un attore
+Madhavan Balaji Ranganathan è un produttore cinematografico
+Madhavan Balaji Ranganathan è indiano
+Madhavan Balaji Ranganathan è nato a Jamshedpur
+Madhavan Balaji Ranganathan è nato il 1 giugno 1970
+R. Madhavan è pseudonimo di Madhavan Balaji Ranganathan
+
+@prefix my: <...>.
+my:madhavan
+    my:nome "Madhavan Balaji Ranganathan";
+    my:pseudonimo "R. Madhavan";
+    my:citta-natale my:jamshedpure;
+    my:data-di-nascita my:1970-06-01;
+    my:lavoro my:attore , my:produttore_cinematografico
+
+my:jamshedpure
+    my:tipo citta;
+    my:nome "Jamshedpure";
+    my:nazione my:india.
+
+my:india
+    my:tipo nazione;
+    my:nome "India".

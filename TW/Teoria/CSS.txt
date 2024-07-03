@@ -1,0 +1,68 @@
+Domande Teoria CSS:
+
+Che differenza c’è in CSS tra il selettore “.foo .bar” e il selettore “.foo >
+.bar”?
+
+.foo . bar fa riferimento a tutti gli elementi che hanno classe "bar" e che sono figli
+(anche non diretti) di elementi che hanno classe "foo"
+
+.foo > .bar fa riferimento a tutti gli elementi che hanno classe "bar" e che sono figli
+diretti di elementi che hanno classe "foo"
+
+-------------------------------------------------------------------------------------------
+
+Scrivere una regola CSS a piacere con un selettore che contenga il carattere > e
+almeno tre statement appropriati e non banali, e commentarla
+
+.pop > .smoke {
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+}
+
+----------------------------------------------------------------------------------------------
+
+Elencare gli id degli elementi identificati dal selettore .foo > .bar quando
+applicato al seguente frammento HTML:
+<div id="foobar">
+    <h1 id="bar">Lista della spesa</h1>
+    <ul id="a" class="foobar">
+        <li id="b" class="bar foo">Macellaio</li>
+        <li id="c" class="bar">Fruttivendolo</li>
+        <li id="d" class="bar">
+            <p id="e" class="foobar">Forno</p>
+            <ol id="f" class="foo">
+                <li id="g" class="bar">Pane</li>
+                <li id="h" class="foo">Pizza</li>
+                <li id="i" class="bar">Paste</li>
+            </ol>
+        </li>
+    </ul>
+</div>
+
+Figli diretti
+id="g"
+id="i"
+
+-------------------------------------------------------------------------------------------------
+
+Avendo un’immagine con classe “rotating-circle”, completare il seguente codice
+CSS per generare una animazione lineare infinita che giri su sé stessa. Per
+provare, si può usare l’immagine SVG posta in “circle.svg” e inserirla in un file
+HTML.
+
+.rotating-circle {
+    transform-origin: 50% 50%;
+    animation: rotate-circle rotate-circle 3s linear infinite;
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+--------------------------------------------------------------------------------------------------

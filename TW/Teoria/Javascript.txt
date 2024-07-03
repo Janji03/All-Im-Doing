@@ -1,0 +1,42 @@
+Domande Teoria JS:
+
+Cos’è una promessa in Javascript?
+Una promessa è un oggetto che prima o poi rappresenterà il completamento o fallimento 
+di un'operazione asincrona e il suo valore risultante
+
+---------------------------------------------------------------------------------------
+
+Che differenza c’è tra object e array in Javascript?
+Un oggetto è una collezione di coppie chiave-valore.
+Un array è una lista ordinata di elementi indicizzati con numeri interi che 
+partono da 0.
+
+----------------------------------------------------------------------------------------
+
+
+Che differenza c’è tra promesse e callback nella programmazione asincrona in
+Javascript?
+
+Una callback è una funzione passata come argomento ad un'altra funzione e 
+viene eseguita (chiamata) dopo che l'operazione asincrona è completata.
+Una promessa è un oggetto che rappresenta il completamento (o il fallimento) 
+finale di un'operazione asincrona e il suo valore risultante.
+
+-----------------------------------------------------------------------------------------
+
+Descrivere le IIFE in Javascript; fornire un esempio non banale e non presente
+nelle slide.
+
+Una IIFE è una funzione anonima creata ed immediatamente invocata.
+
+function main() {
+    fetch('/api/getcontent', { method: "GET" })
+    .then((response) => { if (!response.ok) throw new Error(`Errore HTTP ${response.status}.`) })
+    .then((json) => {
+        displayContent(json);
+        }) 
+    .catch((error) => { throw new Error(error); });
+}();
+
+---------------------------------------------------------------------------------------------
+

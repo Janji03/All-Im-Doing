@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hello world</title>
+    <link rel="stylesheet" href="https://www.fabiovitali.it/TW/lib/bootstrap.min.css">
+    <script src="https://www.fabiovitali.it/TW/lib/jquery-3.6.0.js"></script>         
+    <script src="https://www.fabiovitali.it/TW/lib/bootstrap.js"></script>            
+  </head>
+  <style>
+.back {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("../immagini/background.jpg");
+  background-size: cover;
+  background-blend-mode: darken;
+}
+  </style>
+  <body>
+    <div class="back">
+      <div class="row h-100">
+        <div class="col">
+          <div class="h-100 d-flex justify-content-center align-items-center">
+            <img alt="logo" src="." >
+            <h1 style=" color:white;" > beanche </h1>
+          </div>
+        </div>
+
+        <div class="col py-5">
+          <div class="card w-100 h-100" >
+            <div class="card-body">
+              <h1 class="card-title py-3 fw-bold">Card title</h1>
+              <p class="card-text pt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
+                        eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
+                        et ultrice</p>
+
+              <form>
+                <label class="pb-1" style="font-weight: 200;"> Date of Birth 
+                <span class="badge rounded-pill bg-primary">!</span></label>
+                
+                <div class="input-group mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Month</option>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">march</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+  <input type="number" class="form-control" placeholder="2022" aria-label="Year" >
+</div>
+<button type="submit" class="btn btn-primary" style="border-radius: 20px; float:right;">Continue</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+        </div>
+      </div>
+    </div>
+    <div class="container border p-5 my-3">
+      <h1>Hello world</h1>
+  </body>
+</html>

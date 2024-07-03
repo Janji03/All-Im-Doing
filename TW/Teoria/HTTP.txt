@@ -1,0 +1,43 @@
+Domande Teoria HTTP:
+
+Che differenza c’è in HTTP tra status code di tipo 4xx e status code di tipo 5xx?
+4 è client error e 5 è server error
+
+------------------------------------------------------------------------------------
+
+Il seguente documento HTML è memorizzato su un server web. Quante
+richieste HTTP eseguirà un browser per visualizzarlo correttamente? Si
+assuma che le risorse richieste non facciano altre richieste a loro volta.
+<html>
+    <head>
+        <link rel="stylesheet" href="../skins/kitten.css" type="text/css">
+        <style type="text/css">
+            body {
+                background-image: url("./images/kitten.gif");
+                background-color: #cccccc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Welcome!</h1>
+    </body>
+</html>
+
+Un browser eseguirà 3 richieste HTTP per visualizzare correttamente il 
+documento HTML.
+- HTML: 1 richiesta
+- CSS: 1 richiesta
+- Immagine: 1 richiesta
+
+-------------------------------------------------------------------------------------------
+
+Quale potrebbe plausibilmente essere il primo numero dello status code (al
+posto della X) nella risposta HTTP seguente (e assolutamente inventata)?
+Perchè?
+HTTP/1.1 X57 SQL database is down
+
+Il primo numero dello status code è 5 perchè gli errori 500 indicano che
+la richiesta può anche essere corretta, ma il server non riesce a soddisfarla 
+per un problema interno
+
+--------------------------------------------------------------------------------------------

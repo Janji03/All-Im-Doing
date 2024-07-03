@@ -1,0 +1,10 @@
+<svg class="rotating-circle " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+  <title>Rotating circle</title>
+  <defs>
+    <path d="M100,37c34.8,0,63,28.2,63,63s-28.2,63-63,63s-63-28.2-63-63S65.2,37,100,37z" id="circle"></path>
+  </defs>
+  <text>
+    <textPath xlink:href="#circle">Cerco un centro di gravità permanent che non mi
+      faccia mai cambiare idea</textPath>
+  </text>
+</svg>
