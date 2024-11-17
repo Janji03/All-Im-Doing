@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: repeat(3, 100px); /* Three columns each 100px wide */
+                grid-template-rows: repeat(3, 100px); /* Three rows each 100px tall */
+                gap: 10px; /* Gap between grid items */
+              }
+              
+              .item {
+                background-color: #ccc;
+                border: 1px solid #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              
+              @media screen and (max-width: 768px) {
+                .container {
+                  grid-template-columns: repeat(2, 150px); /* Two columns each 150px wide */
+                  grid-template-rows: repeat(4, 100px); /* Four rows each 100px tall */
+                }
+              }
+              
+              @media screen and (max-width: 480px) {
+                .container {
+                  grid-template-columns: repeat(1, 250px); /* One column 250px wide */
+                  grid-template-rows: repeat(9, 80px); /* Nine rows each 80px tall */
+                }
+              }
+              
+        </style>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+          </div>
+          
+        <script src="" async defer></script>
+    </body>
+</html>

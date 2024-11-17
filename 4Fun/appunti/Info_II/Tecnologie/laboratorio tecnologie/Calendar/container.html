@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <style>
+        html {
+            font-size: 16px; /* Set the root font size to 16px */
+        }
+        main {
+            display: grid;
+            grid-template-areas:
+                "topbar topbar topbar"
+                "ads content sidebar"
+                "footer footer footer";
+            gap: 1rem; /* Use rem for gap */
+        }
+
+        header {
+            grid-area: topbar;
+            font-size: 2rem;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem; /* Use rem for padding */
+        }
+
+        aside {
+            grid-area: ads;
+            background-color: #ccc;
+            padding: 1rem; /* Use rem for padding */
+        }
+
+        article {
+            grid-area: content;
+            background-color: #eee;
+            padding: 1rem; /* Use rem for padding */
+            border: 1px solid #333;
+        }
+
+        nav {
+            grid-area: sidebar;
+            background-color: #ccc;
+            padding: 1rem; /* Use rem for padding */
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: #333;
+            color: #fff;
+            padding: 1rem; /* Use rem for padding */
+        }
+    </style>
+    <main>
+        <header>
+            Header
+        </header>
+        <article>Article</article>
+        <aside>Aside</aside>
+        <nav>Sidebar</nav>
+        <footer>Footer</footer>
+    </main>
+    <script src="" async defer></script>
+</body>
+
+</html>

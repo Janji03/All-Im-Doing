@@ -1,10 +1,24 @@
-# ***I miei tre anni in università*** 
+# My Repo 
 
-## Progetti, Appunti, Random code
+questa repo tiene traccia dei miei progressi come programmatore dal 2021.
+struttura: 
+MyProjects: cartella che contiene i progetti conclusi
+WorkInProgress: cartella che contiene i progetti da finire 
+4Fun: codice, appunti, idee e altro
 
-ho creato questa repository al primo anno di triennale di informatica al fine di  :  
-- conservare tutti i progetti e appunti svolti in questi tre anni
-- vedere il miglioramento nello scrivere codice partendo praticamente da zero
-- riguardarla tra 10 anni e ridere 
+## Progetti 
 
-### " it is what it is "
+- VideoGame 2D (C++, ASCII)
+- CXGame (Java)
+- Selfie (React)
+- Backgammon Scrum (React)
+
+## Strumenti e Competenze
+
+- Full Stack Developer 
+- Software Engineer
+
+***Linguaggi***: C, C++, Java, JavaScript.
+***Framework***: React
+***SO***: Linux, Windows
+***Other***: Python, Bash, HTML, CSS, Git, GitHub, GitLab, Taiga, ...
